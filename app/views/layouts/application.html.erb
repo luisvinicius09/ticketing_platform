@@ -22,10 +22,22 @@
       </div>
     <% end %>
     <div>
-      <%= link_to 'Sign Up', new_user_registration_path, class: 'button'%>
-      <%= link_to 'Sign In', new_user_session_path, class: 'button'%>
-      <%= link_to 'Logout', destroy_user_session_path, class: 'button'%>
-      <%= link_to 'Home', root_path, class: 'button'%>
+      <%= link_to 'Home', root_path, class: 'button' %>
+      <% if user_signed_in? %>
+        <div>
+          <%= link_to 'Profile', edit_user_registration_path, class: 'button' %>
+        </div>
+        <div>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button' %>
+        </div>
+      <% else %>
+        <div>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'button' %>
+        </div>
+        <div>
+          <%= link_to 'Sign In', new_user_session_path, class: 'button' %>
+        </div>
+      <% end %>
     </div>
 
     <%= yield %>
