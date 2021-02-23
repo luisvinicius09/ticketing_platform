@@ -19,7 +19,7 @@
     <h3>Owner:</h3>
     <% if @event.user.name %>
       <%= @event.user.name %>
-    <% else %>
+      <% else %>
       <p>Owner's name not available</p>
     <% end %>
   </div>
@@ -28,5 +28,8 @@
     <%= @event.user.email %>
   </div>
   <hr/>
+    <% if user_signed_in? %>
+      <%= render 'invitations/invitation', event: @event %>
+    <% end %>
     <%= link_to 'Back', events_path %>
 </div>

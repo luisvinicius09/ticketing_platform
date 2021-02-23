@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_192002) do
     t.date "datetime"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "owner_id"
+    t.integer "user_id"
   end
 
   create_table "invitations", force: :cascade do |t|
