@@ -1,4 +1,9 @@
 class RegistrationsController < Devise::RegistrationsController
+
+  def edit
+    @all_events = Event.where(user_id: current_user)
+  end
+
   private
 
   def sign_up_params

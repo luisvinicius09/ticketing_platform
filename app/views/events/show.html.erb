@@ -1,19 +1,32 @@
 <p id="notice"><%= notice %></p>
+<div class="show-event">
+  <p>
+    <strong>Title:</strong><br/>
+    <%= @event.title %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+  <p>
+    <strong>Description:</strong><br/>
+    <%= @event.body %>
+  </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @event.body %>
-</p>
-
-<p>
-  <strong>Datetime:</strong>
-  <%= @event.datetime %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <p>
+    <strong>Datetime:</strong><br/>
+    <%= @event.datetime %>
+  </p>
+  
+  <div>
+    <h3>Owner:</h3>
+    <% if @event.user.name %>
+      <%= @event.user.name %>
+    <% else %>
+      <p>Owner's name not available</p>
+    <% end %>
+  </div>
+  <div>
+    <h3>Email:</h3>
+    <%= @event.user.email %>
+  </div>
+  <hr/>
+    <%= link_to 'Back', events_path %>
+</div>
