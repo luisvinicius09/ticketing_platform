@@ -37,10 +37,16 @@
 
   <hr width="1" size="500" style="margin: 10px;">
   <div>
-  <h1>Your events</h1>
+  <h1>Previous Events</h1>
   <div class="grid-2">
-    <%= render @all_events%>
-  </div>
-
+    <% @prev_events.each do |event| %>
+      <%= render event %>
+    <% end %>
+    </div>
+  <h1>Upcoming Events</h1>
+    <% @next_events.each do |event| %>
+      <%= render event %>
+    <% end %>
+      
   </div>
 </div>

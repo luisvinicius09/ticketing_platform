@@ -2,6 +2,8 @@ class RegistrationsController < Devise::RegistrationsController
 
   def edit
     @all_events = Event.where(user_id: current_user)
+    @prev_events = current_user.events.prev_events
+    @next_events = current_user.events.next_events
   end
 
   private
