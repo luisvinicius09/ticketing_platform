@@ -2,9 +2,6 @@
   <div>
     <h1><%= event.title %></h1>
   </div>
-  <div>
-    <h4><%= event.body %></h4>
-  </div>
   <hr/>
   <div>
     <h3>Date:</h3>
@@ -22,7 +19,8 @@
     <h3>Email:</h3>
     <%= event.user.email %>
   </div>
-  <div>
+  <hr/>
+  <div class="show-button">
     <%= link_to 'Show', event, class: 'button' %>
   </div>
 </div>

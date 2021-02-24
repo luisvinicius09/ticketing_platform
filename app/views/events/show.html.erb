@@ -4,17 +4,14 @@
     <strong>Title:</strong><br/>
     <%= @event.title %>
   </p>
-
   <p>
     <strong>Description:</strong><br/>
     <%= @event.body %>
   </p>
-
   <p>
     <strong>Datetime:</strong><br/>
     <%= @event.datetime %>
   </p>
-  
   <div>
     <h3>Owner:</h3>
     <% if @event.user.name %>
@@ -28,8 +25,21 @@
     <%= @event.user.email %>
   </div>
   <hr/>
-    <% if user_signed_in? %>
-      <%= render 'invitations/invitation', event: @event %>
+
+  <% if user_signed_in? %>
+    <%= render 'invitations/invitation', event: @event %>
+  <% else %>
+    <h3>To attend this event you need to log in!</h3>
+  <% end %>
+
+  <div>
+    <h2>List of members</h2>
+    <% if @event.attendees.empty? %>
+      <h3>No members in this event</h3>
+    <% else %>
+      <% @event.attendees.each do |attendee| %>
+        <p><%= attendee.name %></p>
+      <% end %>
     <% end %>
-    <%= link_to 'Back', events_path %>
+  </div>
 </div>
