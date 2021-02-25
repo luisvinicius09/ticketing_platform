@@ -12,30 +12,12 @@
 
   <body>
     <%= flash_notice() %>
-    <% if flash[:alert] %>
-      <div class="notification">
-        <p class="alert"><%= alert %></p>
-      </div>
-    <% end %>
+    <%= flash_alert() %>
     <div style="display: flex;">
       <div class="button">
         <%= link_to 'Home', root_path %>
       </div>
-      <% if user_signed_in? %>
-        <div class="button">
-          <%= link_to 'Profile', edit_user_registration_path %>
-        </div>
-        <div class="button">
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-        </div>
-      <% else %>
-        <div class="button">
-          <%= link_to 'Sign Up', new_user_registration_path %>
-        </div>
-        <div class="button">
-          <%= link_to 'Sign In', new_user_session_path %>
-        </div>
-      <% end %>
+      <%= nav_bar(user_signed_in?) %>
     </div>
 
     <%= yield %>
