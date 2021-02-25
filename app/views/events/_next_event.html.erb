@@ -1,0 +1,26 @@
+<div style="border: 1px solid black; border-radius: 10px; width: 250px; padding: 20px; margin: 15px;">
+  <div>
+    <h1><%= event.title %></h1>
+  </div>
+  <hr/>
+  <div>
+    <h3>Date:</h3>
+    <%= event.datetime%>
+  </div>
+  <div>
+    <h3>Owner:</h3>
+    <% if event.user.name %>
+      <%= event.user.name %>
+    <% else %>
+      <p>Owner's name not available</p>
+    <% end %>
+  </div>
+  <div>
+    <h3>Email:</h3>
+    <%= event.user.email %>
+  </div>
+  <hr/>
+  <div class="show-button">
+    <%= link_to 'Show', event, class: 'button' %>
+  </div>
+</div>

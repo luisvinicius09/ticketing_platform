@@ -39,14 +39,10 @@
   <div>
   <h1>Previous Events</h1>
   <div class="grid-2">
-    <% @prev_events.each do |event| %>
-      <%= render event %>
-    <% end %>
+    <%= render @prev_events %>
     </div>
   <h1>Upcoming Events</h1>
-    <% @next_events.each do |event| %>
-      <%= render event %>
-    <% end %>
+  <%= render @next_events %>
       
   </div>
 </div>

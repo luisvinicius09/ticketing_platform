@@ -6,13 +6,10 @@
 <hr style="position: relative; top: 5px;"/>
 <h2>Previous Events</h2>
 <div class="grid">
-  <% @prev_events.each do |event|%>
-    <%= render event %>
-  <% end %>
+  <%= render @prev_events %>
 </div>
+
 <h2>Upcoming Events</h2>
 <div class="grid">
-  <% @next_events.each do |event|%>
-    <%= render event %>
-  <% end %>
+  <%= render @next_events%>
 </div>
