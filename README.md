@@ -1,65 +1,52 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Ticketing platform
 
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+> Implementation of a ticketing platform, that users can create multiple events & attend multiple events.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- Ruby
+- Ruby on Rails
+- Text Editor
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
 
+- Clone or download the repository/files.
+
 ### Prerequisites
+
+- Text Editor
+- [Ruby](https://rubyinstaller.org/downloads/) installed.
+- [Ruby on rails](https://guides.rubyonrails.org/v5.0/getting_started.html) installed.
+- [Bundler](https://bundler.io) installed
 
 ### Setup
 
-### Install
+- The first you need to run the project, is download all the dependecies... running this command `bundle install`
+- The second thing is to migrate the database... running `rails db:migrate`
 
 ### Usage
 
-### Run tests
-
-### Deployment
-
+- To initialize the server... run `rails s`
+- You will be able to access through your browser on this url: `127.0.0.1:3000`
 
 
-## Authors
+## Author
 
-👤 **Author1**
+👤 **Luis Vinicius Marques**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- GitHub: [@luisvinicius09](https://github.com/luisvinicius09)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/luis-vinicius)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/luisvinicius09/members-area/issues).
 
 ## Show your support
 
@@ -70,7 +57,3 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
