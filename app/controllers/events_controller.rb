@@ -5,20 +5,14 @@ class EventsController < ApplicationController
   # GET /events or /events.json
   def index
     @events = Event.all
-    @prev_events = Event.where('datetime < ?', Date.current)
-    @next_events = Event.where('datetime >= ?', Date.current)
+    @prev_events = Event.prev_events
+    @next_events = Event.next_events
   end
-
-  # GET /events/1 or /events/1.json
-  def show; end
 
   # GET /events/new
   def new
     @event = current_user.events.build
   end
-
-  # GET /events/1/edit
-  def edit; end
 
   # POST /events or /events.json
   def create
