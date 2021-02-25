@@ -34,6 +34,10 @@ To get a local copy up and running follow these simple example steps.
 - To initialize the server... run `rails s`
 - You will be able to access through your browser on this url: `127.0.0.1:3000`
 
+### Tests
+
+- To run tests properly you will need rspec, install it using `gem install rspec`
+- Navigate to the root folder of the application and run `rspec spec` to run all the tests.
 
 ## Author
 
