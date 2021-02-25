@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<% if user_signed_in?%>
-  <%= link_to 'New Event', new_event_path, class: 'new-event' %>
-<% end %>
+<%= render 'new_event' %>
 
 <br/ >
 <hr style="position: relative; top: 5px;"/>
