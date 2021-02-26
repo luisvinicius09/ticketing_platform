@@ -22,10 +22,10 @@
   </div>
   <hr/>
 
-  <%= render 'events/partials/invitation' %>
+  <%= invitation(user_signed_in?) %>
 
   <div>
     <h2>List of members</h2>
-    <%= render 'events/partials/member'%>
+    <%= show_member(@event.attendees.empty?) %>
   </div>
 </div>
