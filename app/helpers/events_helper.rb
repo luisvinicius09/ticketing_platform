@@ -1,8 +1,6 @@
 module EventsHelper
   def new_event(var)
-    if var
-      render inline: '<%= link_to "New Event", new_event_path, class: "new-event" %>'
-    end
+    render inline: '<%= link_to "New Event", new_event_path, class: "new-event" %>' if var
   end
 
   def show_member(var)
