@@ -1,0 +1,26 @@
+// Working on a simple server that just listen to a port
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+		res.end('Hello World\n')
+})
+
+server.listen(3000, () => {
+		console.log('Listening on the port 3000')
+})
+
+
+/*--------*//*--------*//*--------*//*--------*//*--------*//*--------*//*--------*/
+
+/*--------*//*--------*//*--------*//*--------*//*--------*//*--------*//*--------*/
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+		res.end('Hello World')
+})
+
+server.listen(3000, () => {
+		console.log('Listening on the port 3000!')
+})

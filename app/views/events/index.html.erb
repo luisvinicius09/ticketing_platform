@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= render 'new_event' %>
+<%= new_event(user_signed_in?) %>
 
 <br/ >
 <hr style="position: relative; top: 5px;"/>
@@ -11,5 +11,5 @@
 
 <h2>Upcoming Events</h2>
 <div class="grid">
-  <%= render @next_events%>
+  <%= render @next_events %>
 </div>

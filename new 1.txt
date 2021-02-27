@@ -1,0 +1,14 @@
+// Remember things again
+
+.map() --> Invoca uma callback para cada elemento no array e retorna um novo array como resultado.
+
+
+Array.prototype.myMap = function(callback) {
+		const nMA = [];
+		for(let i = 0; i <= this.length; i++) {
+				const item = this[i]
+				const r = callback(r, item)
+				nMA.push(r)
+		}
+		return nMA;
+}
