@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="show-event">
+  <p>
+    <strong>Title:</strong><br/>
+    <%= @event.title %>
+  </p>
+  <p>
+    <strong>Description:</strong><br/>
+    <%= @event.body %>
+  </p>
+  <p>
+    <strong>Datetime:</strong><br/>
+    <%= @event.datetime %>
+  </p>
+  <div>
+    <h3>Owner:</h3>
+    <%= @event.user.name %>
+  </div>
+  <div>
+    <h3>Email:</h3>
+    <%= @event.user.email %>
+  </div>
+  <hr/>
+
+  <%= invitation(user_signed_in?) %>
+
+  <div>
+    <h2>List of members</h2>
+    <%= show_member(@event.attendees.empty?) %>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TicketingPlatform</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= flash_notice() %>
+    <%= flash_alert() %>
+    <div style="display: flex;">
+      <div class="button">
+        <%= link_to 'Home', root_path %>
+      </div>
+      <%= nav_bar(user_signed_in?) %>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

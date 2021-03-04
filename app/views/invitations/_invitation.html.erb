@@ -1,0 +1,8 @@
+  <%= form_with(model: @invitation, url: invitations_path, method: 'POST', local: true) do |form| %>
+    <div class="">
+      <%= form.hidden_field :event_id, class: '', value: event.id %>
+      <div>
+        <%= form.submit 'Attend Event' %>
+      </div>
+    </div>
+  <% end %>

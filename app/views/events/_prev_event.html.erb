@@ -1,0 +1,22 @@
+<div class="extra">
+  <div>
+    <h1><%= event.title %></h1>
+  </div>
+  <hr/>
+  <div>
+    <h3>Date:</h3>
+    <%= event.datetime%>
+  </div>
+  <div>
+    <h3>Owner:</h3>
+      <%= event.user.name %>
+  </div>
+  <div>
+    <h3>Email:</h3>
+    <%= event.user.email %>
+  </div>
+  <hr/>
+  <div class="show-button">
+    <%= link_to 'Show', event, class: 'button' %>
+  </div>
+</div>
